@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@media (max-width:450px) {
+    .resp {
+        margin-top: 40%;
+        
+    }
+    .respo{
+        display: flex;
+        flex-direction: column;
+    }
+    .respon{
+        margin-left: 20vw;
+        padding: 10px;
+    }
+    .respons{
+        margin-right: 50%;
+        width: 400px;
+    }
+}

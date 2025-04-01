@@ -1,16 +1,27 @@
-import React from 'react'
+import React from 'react';
 
-const NumberSelector = () => {
-    const arr = [1, 2, 3, 4, 5, 6]
+const NumberSelector = ({ selectedNum, setSelectedNum, error }) => {
+    const arr = [1, 2, 3, 4, 5, 6];
+
     return (
-        <div>
-            {arr.map((val, i) => {
-                return (
-                    <div key={i} className='inline mx-10 text-2xl border-[2px] border-black p-5 px-8 hover:bg-black hover:text-white cursor-pointer transition-all rounded-3xl'>{val}</div>
-                )
-            })}
-        </div>
-    )
-}
+        <>
+            <div className="flex flex-col">
+                <div className='my-5 ml-[30vw] text-red-700 font-bold respons'>{error}</div>
+                <div className="flex space-x-4">
+                    {arr.map((val, i) => (
+                        <div
+                            key={i}
+                            onClick={() => setSelectedNum(val)}
+                            className={`respon inline-block text-2xl border-2 border-black p-5 px-8 cursor-pointer transition-all rounded-3xl ${selectedNum === val ? 'bg-black text-white' : 'bg-white text-black'
+                                }`}
+                        >
+                            {val}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </>
+    );
+};
 
-export default NumberSelector
+export default NumberSelector;
