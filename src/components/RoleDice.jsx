@@ -1,6 +1,11 @@
 import React from 'react'
 import Rules from './Rules'
 import dice1 from '../../public/dice_1.png'
+import dice2 from '../../public/dice_2.png'
+import dice3 from '../../public/dice_3.png'
+import dice4 from '../../public/dice_4.png'
+import dice5 from '../../public/dice_5.png'
+import dice6 from '../../public/dice_6.png'
 
 const RoleDice = () => {
     return (
